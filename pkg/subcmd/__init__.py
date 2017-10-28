@@ -28,3 +28,4 @@ class SubCommand(object):
 
 from .version import *
 from .dns import *
+from .get import *

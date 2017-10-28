@@ -8,15 +8,28 @@
 @time: 2017/10/27 10:46
 """
 
-from . import SubCommand
+from . import BaseFlag,SubCommand
+from pkg.control.dns.dns import DnsController
 
 
-def _show_dns(args):
-    print('dns null')
+def _dns(args):
+    dns = DnsController()
+    return dns.get_local_dns()
 
 DNSCommand = SubCommand(
     name='dns',
     help='help your dns',
-    metavar='',
-    func=_show_dns
+    metavar='<domain resolution>',
+    flags=[],
+    subcmds=[
+        SubCommand(name="local",usage="local dns",
+                   flags=[],
+                   func=_dns),
+        SubCommand(name="ali",usage="domain resolution",
+                   flags=[
+                       BaseFlag('list', metavar='list domain', nargs='?')
+
+                   ],
+                   func=_dns),
+    ]
 )

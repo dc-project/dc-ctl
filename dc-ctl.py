@@ -10,7 +10,7 @@
 
 import sys
 import argparse
-from pkg.subcmd import VersionCommand
+from pkg.subcmd import VersionCommand,DNSCommand,GetCommand
 
 class SubCommands(object):
 
@@ -28,7 +28,7 @@ class SubCommands(object):
 def main():
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(metavar='<subcommand>')
-    SubCommands.add(subparsers,VersionCommand)
+    SubCommands.add(subparsers,VersionCommand,DNSCommand,GetCommand)
     args = parser.parse_args()
 
     if hasattr(args, 'func') and args.func is not None:
