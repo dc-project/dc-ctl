@@ -27,3 +27,4 @@ class SubCommand(object):
         self.func = func
 
 from .version import *
+from .dns import *
