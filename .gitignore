@@ -6,3 +6,4 @@ pkg/version.py
 .release
 venv
 *.pyc
+dc-ctl
