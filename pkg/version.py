@@ -1,6 +1,6 @@
 VERSION = {
     'release': "master",
     'version': "0.1",
-    'gitcommit': "a65168a",
-    'buildTime': "2017-11-28 11:44:59",
+    'gitcommit': "abd63b7",
+    'buildTime': "2017-11-28 12:06:31",
 }
