@@ -2,7 +2,6 @@
 .env
 __pycahche__
 release.sh
-pkg/version.py
 .release
 venv
 *.pyc
