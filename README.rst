@@ -28,10 +28,6 @@ Dc-ctl Auto Install script: the total way
 
 `pip`
 
-Author
-======
-
-Nicolas Hennion (@nicolargo) <nicolas@nicolargo.com>
 
 License
 =======
