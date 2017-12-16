@@ -8,8 +8,9 @@
 @time: 2017/10/27 10:46
 """
 
-from . import BaseFlag,SubCommand
 from pkg.control.dns.dns import DnsController
+
+from . import BaseFlag, SubCommand
 
 
 def _dns(args):

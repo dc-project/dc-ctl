@@ -8,9 +8,11 @@
 @time: 10/25/17 12:15 AM
 """
 
-import sys
 import argparse
-from pkg.subcmd import VersionCommand,DNSCommand,GetCommand,ShowCommand
+import sys
+
+from pkg.subcmd import VersionCommand, DNSCommand, GetCommand, ShowCommand
+
 
 class SubCommands(object):
 
@@ -28,7 +30,7 @@ class SubCommands(object):
 def main():
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(metavar='<subcommand>')
-    SubCommands.add(subparsers,VersionCommand,DNSCommand,GetCommand,ShowCommand)
+    SubCommands.add(subparsers, VersionCommand, DNSCommand, GetCommand, ShowCommand)
     args = parser.parse_args()
 
     if hasattr(args, 'func') and args.func is not None:
